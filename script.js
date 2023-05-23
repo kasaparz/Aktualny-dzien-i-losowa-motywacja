@@ -35,4 +35,13 @@ const facts = [
 ];
 
 const day = new Date();
-console.log(day.toLocaleString("pl", { weekday: "long" }));
+// console.log(day.toLocaleString("pl", { weekday: "long" }));
+currentDay.textContent = day.toLocaleString("pl", { weekday: "long" });
+
+const showRandom = () => {
+	const number = Math.floor(Math.random() * facts.length);
+	console.log(number);
+	funFact.textContent = facts[number];
+};
+
+showRandom();
